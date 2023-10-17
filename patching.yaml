@@ -1,6 +1,6 @@
 ---
 - name: Patch Linux system
-  remote_user: ansible
+  remote_user: mohini
   hosts: all
   become: true
   ignore_errors: yes
