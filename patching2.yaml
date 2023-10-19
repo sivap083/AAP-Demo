@@ -1,6 +1,6 @@
 ---
 - name: Patch Linux system
-  remote_user: root
+  remote_user: ec2-user
   hosts: all
   become: true
   ignore_errors: yes
