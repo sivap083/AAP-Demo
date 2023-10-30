@@ -3,7 +3,7 @@
       {
         "id": 1,
         "hostname": "ip-172-31-36-29.ec2.internal",
-        "ip_address": "54.197.220.16",
+        "ip_address": "23.22.168.26",
         "status": "active",
         "os": "Linux",
         "owner": "Admin User"
