@@ -3,7 +3,7 @@
         "hostvars": {}
     },
     "webservers": {
-        "hosts": ["target1-linux"],
+        "hosts": ["ip-172-31-36-29.ec2.internal"],
         "vars": {
             "ansible_ssh_user": "ec2-user",
             "ansible_ssh_private_key_file": "~/.ssh/vm-demo-rhel9-key.ppk"
