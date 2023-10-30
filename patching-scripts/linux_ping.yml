@@ -1,5 +1,5 @@
 ---
-- name: Check connectivity to remote servers
+- name: Ping test for linux clients
   hosts: web
   gather_facts: True
   tasks:
