@@ -3,10 +3,9 @@
         "hostvars": {}
     },
     "webservers": {
-        "hosts": ["ip-172-31-43-211.ec2.internal"],
+        "hosts": ["ip-172-31-43-211.ec2.internal","ip-172-31-32-23.ec2.internal"],
         "vars": {
-            "ansible_ssh_user": "ec2-user"
-            
+            "ansible_ssh_user": "ec2-user" 
         }
     }
 }
