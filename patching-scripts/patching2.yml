@@ -7,11 +7,11 @@
   
   tasks:
     - name: Update package lists
-      apt:
+      yum:
         update_cache: yes
 
     - name: Upgrade all packages
-      apt:
+      yum:
         upgrade: dist  # This ensures that all packages are upgraded
         autoremove: yes
         autoclean: yes
