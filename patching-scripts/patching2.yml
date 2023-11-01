@@ -10,8 +10,8 @@
       yum:
         update_cache: yes
 
-    - name: Upgrade all packages
-      yum:
-        upgrade: dist  # This ensures that all packages are upgraded
-        autoremove: yes
-        autoclean: yes
+##    - name: Upgrade all packages
+##      yum:
+##        upgrade: dist  # This ensures that all packages are upgraded
+##        autoremove: yes
+##        autoclean: yes
