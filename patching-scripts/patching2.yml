@@ -5,13 +5,29 @@
   become: true
   ignore_errors: yes
   
-  tasks:
-    - name: Update package lists
-      yum:
-        update_cache: yes
-
+##  tasks:
+##    - name: Update package lists
+##      yum:
+##        update_cache: yes
 ##    - name: Upgrade all packages
 ##      yum:
 ##        upgrade: dist  # This ensures that all packages are upgraded
 ##        autoremove: yes
 ##        autoclean: yes
+
+  tasks:
+    - name: Update the system with yum
+      yum:
+        name: '*'
+        state: latest
+  
+    - name: Install Apache (httpd)
+      yum:
+        name: httpd
+        state: present
+  
+    - name: Start the httpd service
+      service:
+        name: httpd
+        state: started
+        enabled: yes
