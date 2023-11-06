@@ -1,0 +1,20 @@
+---
+- name: Sample Windows Playbook
+  hosts: windows_servers
+  gather_facts: no  # Disable fact gathering for Windows hosts
+
+  tasks:
+    - name: Create a directory on Windows
+      win_file:
+        path: C:\ExampleDirectory
+        state: directory
+
+    - name: Copy a file to Windows
+      win_copy:
+        src: /tmp/file.txt
+        dest: C:\ExampleDirectory\file.txt
+
+    - name: Restart a Windows service
+      win_service:
+        name: SomeService
+        state: restarted
