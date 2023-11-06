@@ -1,13 +1,11 @@
 {
-    "hosts": [
-      {
-        "id": 1,
-        "hostname": "ip-172-31-36-29.ec2.internal",
-        "ip_address": "23.22.168.26",
-        "status": "active",
-        "os": "Linux",
-        "owner": "Admin User"
+  "_meta": {
+      "hostvars": {}
+  },
+  "webservers": {
+      "hosts": ["ec2-204-236-214-111.compute-1.amazonaws.com"],
+      "vars": {
+          "ansible_ssh_user": "Administrator" 
       }
-    ]
   }
-  
+}
