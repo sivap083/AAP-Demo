@@ -5,7 +5,7 @@
   "webservers": {
       "hosts": ["ec2-204-236-214-111.compute-1.amazonaws.com"],
       "vars": {
-          "ansible_ssh_user": "Administrator" 
+          "ansible_ssh_user": "ec2-user" 
       }
   }
 }

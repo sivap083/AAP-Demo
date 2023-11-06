@@ -1,6 +1,6 @@
 ---
 - name: Sample Windows Playbook
-  hosts: windows_servers
+  hosts: all
   gather_facts: no  # Disable fact gathering for Windows hosts
 
   tasks:
