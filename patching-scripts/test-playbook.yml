@@ -1,0 +1,13 @@
+---
+- name: Main Playbook
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Include Linux playbook for Linux hosts
+      include: linux_ping.yml
+      when: "'linux' in inventory_hostname"
+
+    - name: Include Windows playbook for Windows hosts
+      include: windows.yml
+      when: "'windows' in inventory_hostname"
