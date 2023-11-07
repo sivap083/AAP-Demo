@@ -6,7 +6,7 @@
   tasks:
     - name: Create a directory on Windows
       win_file:
-        path: C:\ExampleDirectory
+        path: C:\ExampleDirectory\test
         state: directory
 
     - name: Restart a Windows service
