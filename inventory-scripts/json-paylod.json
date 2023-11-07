@@ -1,23 +1,31 @@
 {
     "_meta": {
-        "hostvars": {}
+      "hostvars": {}
     },
     "win-webservers": {
-        "hosts": ["ec2-204-236-214-111.compute-1.amazonaws.com"],
-        "vars": {
-            "ansible_ssh_user": "ec2-user", 
-            "ansible_connection": "winrm",
-            "ansible_winrm_transport": "ntlm",
-            "ansible_port": "5985",
-            "ansible_winrm_Server_cert_validation": "ignore"
-        },
-        "tags": ["windows"]
+      "hosts": [
+        "ec2-204-236-214-111.compute-1.amazonaws.com"
+      ],
+      "vars": {
+        "ansible_ssh_user": "ec2-user",
+        "ansible_connection": "winrm",
+        "ansible_winrm_transport": "ntlm",
+        "ansible_port": "5985",
+        "ansible_winrm_Server_cert_validation": "ignore"
+      },
+      "tags": [
+        "windows"
+      ]
     },
     "linux-webservers": {
-        "hosts": ["ec2-3-90-40-152.compute-1.amazonaws.com"],
-        "vars": {
-            "ansible_ssh_user": "ec2-user" 
-        },
-        "tags": ["linux"]
+      "hosts": [
+        "ec2-3-90-40-152.compute-1.amazonaws.com"
+      ],
+      "vars": {
+        "ansible_ssh_user": "ec2-user"
+      },
+      "tags": [
+        "linux"
+      ]
     }
-}
+  }
