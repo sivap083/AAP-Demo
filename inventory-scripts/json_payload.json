@@ -2,10 +2,16 @@
   "_meta": {
       "hostvars": {}
   },
-  "webservers": {
+  "win-webservers": {
       "hosts": ["ec2-204-236-214-111.compute-1.amazonaws.com"],
       "vars": {
           "ansible_ssh_user": "ec2-user" 
       }
-  }
+  },
+  "linux-webservers": {
+    "hosts": ["ec2-3-90-40-152.compute-1.amazonaws.com"],
+    "vars": {
+        "ansible_ssh_user": "ec2-user"
+    }
+}
 }
