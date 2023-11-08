@@ -9,6 +9,7 @@
         category_names: 
           - CriticalUpdates
           - SecurityUpdates
+          - UpdateRollups
         state: searched
       register: available_updates
 #      become: yes
