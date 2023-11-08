@@ -11,7 +11,7 @@
           - SecurityUpdates
         state: searched
       register: available_updates
-#      become: yes
+      become: yes
 
     - name: Display Available Updates
       debug:
