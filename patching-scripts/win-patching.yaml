@@ -6,7 +6,7 @@
   tasks:
     - name: Search for Available Windows Updates
       win_updates:
-        state: list
+        state: searched
       register: available_updates
 #      become: yes
 
