@@ -8,7 +8,7 @@
       win_updates:
         state: list
       register: available_updates
-      become: yes
+#      become: yes
 
     - name: Display Available Updates
       debug:
