@@ -35,7 +35,7 @@
 #      become: yes
 
     - name: Run PowerShell Script to Get KB Numbers
-      win_command: Get-HotFix | Select-Object -Property HotFixID | Format-Table -HideTableHeaders
+      win_command: Get-HotFix | Select-Object -Property Description, HotFixID
       register: kb_output
 #      become: yes
 
