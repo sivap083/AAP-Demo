@@ -16,7 +16,7 @@
 
     - name: Extract KB Numbers from Available Updates
       set_fact:
-        kb_numbers: "{{ available_updates.updates | json_query('[*].hotfix_id') | join(',') }}"
+        kb_numbers: "{{ available_updates.updates | community.general.json_query('[*].hotfix_id') | join(',') }}"
 
     - name: Display Extracted KB Numbers
       debug:
