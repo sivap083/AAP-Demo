@@ -4,6 +4,6 @@
   gather_facts: no
 
   tasks:
-    - name: Search for Available Windows Updates
-      include_role:
-        name: check_win_updates
+  - name: Search for Available Windows Updates
+    include_role:
+      name: check_win_updates
