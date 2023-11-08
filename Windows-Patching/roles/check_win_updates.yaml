@@ -1,0 +1,30 @@
+---
+- name: Search for Available Windows Updates
+  win_updates:
+    category_names: 
+      - CriticalUpdates
+      - SecurityUpdates
+      - UpdateRollups
+    state: searched
+  register: available_updates
+#      become: yes
+
+- name: Display Available Updates
+  debug:
+    var: available_updates.updates
+
+- name: Extract KB Numbers from Available Updates
+  set_fact:
+    kb_numbers: "{{ available_updates.updates | map(attribute='hotfix_id') | list | join(',') }}"
+
+- name: Display Extracted KB Numbers
+  debug:
+    var: kb_numbers
+
+- name: Install Updates with Extracted KB Numbers
+  win_updates:
+    category_names: SecurityUpdates
+    hotfixes: "{{ kb_numbers }}"
+    state: installed
+  when: kb_numbers is defined and kb_numbers != ""
+#      become: yes

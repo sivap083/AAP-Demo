@@ -33,12 +33,3 @@
         state: installed
       when: kb_numbers is defined and kb_numbers != ""
 #      become: yes
-
-    - name: Run PowerShell Script to Get KB Numbers
-      win_command: Get-HotFix | Select-Object -Property Description, HotFixID
-      register: kb_output
-#      become: yes
-
-    - name: Display KB Numbers
-      debug:
-        var: kb_output.stdout_lines

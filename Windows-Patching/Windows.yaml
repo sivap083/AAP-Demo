@@ -1,0 +1,9 @@
+---
+- name: Windows Patch Management
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Search for Available Windows Updates
+      include_role:
+        name: check_win_updates
