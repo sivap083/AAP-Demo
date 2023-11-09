@@ -8,7 +8,7 @@
           "ansible_user": "Administrator", 
           "ansible_connection": "winrm",
           "ansible_winrm_transport": "basic",
-          "ansible_port": "5986",
+          "ansible_port": "5985",
           "ansible_winrm_Server_cert_validation": "ignore"
       },
       "tags": ["windows"]
